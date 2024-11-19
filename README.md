@@ -4,7 +4,9 @@
 
 ![Sample](sample.avif)
 
-サンプルを動かすだけならWEBサーバーだけで足りますが、素材の生成のためにはPythonなどが必要です。
+Github Pageで動作させているサンプルは[こちら](https://nakatatsu.github.io/image-narrator/reader.html?dir=sample)。
+
+なお生成済のサンプルを動かすだけならWEBサーバーだけで事足りますが、素材の生成まで行うならPythonなどが必要です。Usageを参照ください。
 
 ## Usage
 
