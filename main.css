@@ -1,0 +1,122 @@
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+            background-color: #000;
+            color: rgba(200, 200, 200, 1.0);
+        }
+
+        .image-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            max-width: 80%;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .caption {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 30px;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: rgba(255, 255, 255, 1.0);
+            font-size: 20px;
+            line-height: 1.5;
+            box-sizing: border-box;
+            max-width: 100%;
+            max-height: 100%;
+            overflow: hidden;
+            word-wrap: break-word;
+            text-align: left;
+            text-shadow:
+                -1px -1px 0 rgba(0, 0, 0, 0.8),
+                1px -1px 0 rgba(0, 0, 0, 0.8),
+                -1px 1px 0 rgba(0, 0, 0, 0.8),
+                1px 1px 0 rgba(0, 0, 0, 0.8);
+        }
+
+        .navigation {
+            margin: 20px 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        .navigation a {
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #007BFF;
+            cursor: pointer;
+        }
+
+        .navigation a:hover {
+            text-decoration: underline;
+        }
+
+        .page-numbers {
+            width: 1152px;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 10px 0;
+            background-color: #222;
+            border: 1px solid #444;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .number-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .page-numbers span {
+            display: inline-block;
+            margin: 0;
+            padding: 5px 10px;
+            font-size: 16px;
+            color: #555;
+            cursor: pointer;
+            background-color: #bbb;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .page-numbers span:hover {
+            background-color: #c8c8c8;
+        }
+
+        .page-numbers .current {
+            font-weight: bold;
+            color: white;
+            background-color: #007BFF;
+            border-radius: 4px;
+            padding: 5px 10px;
+        }
+
+        .title {
+            color: #777;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }

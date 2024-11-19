@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Page Viewer</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p class="title">{{ title }}</p>
+
+        <div class="image-container" @click="nextPage">
+            <img :src="currentImage" alt="Image">
+            <div class="caption" v-if="isCaptionVisible" v-html="currentCaption"></div>
+        </div>
+
+        <!-- Prev / Next Links -->
+        <div class="navigation">
+            <a @click="prevPage">&laquo; Prev</a>
+            <a @click="toggleCaptionVisibility">Caption On/Off</a>
+            <a @click="nextPage">Next &raquo;</a>
+            <p class="index"><a href="index.html">&raquo;Return Index &laquo;</a></p>
+        </div>
+
+        <!-- Page Numbers -->
+        <div class="page-numbers">
+            <div class="number-container">
+                <span v-for="page in pageMax" :key="page" @click="goToPage(page)"
+                    :class="{ current: currentID === page }">
+                    {{ page }}
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+    <div>
+        <h3>Help</h3>
+        <ul>
+            <li><strong>画像をクリック / 右矢印キー </strong>: 次のページに移動</li>
+            <li><strong>左矢印キー </strong>: 前のページに戻る</li>
+            <li><strong>スペースキー</strong>: テキストの表示・非表示を切り替える</li>
+        </ul>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
